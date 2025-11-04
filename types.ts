@@ -1,6 +1,13 @@
-
 export interface PhotoData {
-  data: string; // base64 data without prefix
+  data: string;
   mimeType: string;
-  dataUrl: string; // full data URL for img src
+}
+
+declare global {
+  interface Window {
+    adt_ajax: {
+      api_url: string;
+      nonce: string;
+    };
+  }
 }
